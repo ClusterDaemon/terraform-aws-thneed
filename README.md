@@ -2,7 +2,7 @@
 
 This module aims to create a resilient VPC with strong focus on private interconnectivity.
 
-This module is designed to be able to be used independently, though emits output attributes and stores state in a way that may be used to place EKS clusters within resources this module defines in a highly consistent manner. Additionally, this module is designed to attach its VPC to a Transit Gateway, enabling inter-VPC private networking without peering.
+This module is designed to be able to be used independently, though emits output attributes that may be used to create very high-density EKS clusters in environments with contrained routable address space. Additionally, this module is designed to attach its VPC to a Transit Gateway as well as an arbitrary amount of unmanaged (customer) VPC endpoints, enabling inter-VPC private networking without requiring peering.
 
 - [terraform-aws-thneed](#terraform-aws-thneed)
   - [Features](#features)
@@ -81,6 +81,6 @@ AWS | => 2.41
 | --- | --- |
 | az\_colocate | https://github.com:ClusterDaemon/terraform-aws-privatelink-az-colocation |
 | subnets | hashicorp/subnets/cidr |
-| vpc | ClusterDaemon/vpc/aws |
+| vpc | terraform-aws-modules/vpc/aws |
 | vpc\_endpoint | https://github.com:ClusterDaemon/terraform-aws-vpc-interface-endpoint-private-dns |
 | tgw\_attachment | https://github.com:ClusterDaemon/terraform-aws-transit-gateway-attachment |
