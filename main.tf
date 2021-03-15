@@ -9,10 +9,6 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = "us-west-2"
-}
-
 locals {
 
   # For resources which are already regionally scoped:
