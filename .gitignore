@@ -38,6 +38,9 @@ Temporary Items
 *.tfstate
 *.tfstate.*
 
+# Ignore the provider version lock file.
+.terraform.lock.hcl
+
 # Crash log files
 crash.log
 
